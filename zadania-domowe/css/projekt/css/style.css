@@ -85,6 +85,8 @@ section {
 .main-header .main-header-content p span {
     color: #007bff;
     font-size: 5px;
+    position: relative;
+    top: -5px;
 }
 
 /* Main menu styles */
@@ -180,7 +182,7 @@ label[for="drop-nav"]  {
     font-weight: 300;
     font-size: 3em;
     opacity: 0;
-    transition: all 0.3;
+    transition: all 0.3s;
 }
 
 .portfolio-wrapper .portfolio-item h3:hover {
