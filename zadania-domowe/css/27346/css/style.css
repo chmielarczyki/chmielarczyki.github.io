@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 600px;
+    height: 600px;
+  /*   background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .square {
+    width: 33%;
+    height: 33%;
+    border: 1px solid white;
+    position: relative;
+  }
+  
+  .circle {
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+   /*  background-color: #3DB3D6; */
+    position: absolute;
+    top: 50px; 
+    right: 50px;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .pink {
+    background-color: #FF99CC;
+  }
+  
+  .blue {
+    background-color: #6633FF;
+  }
+  
+  .gray {
+    background-color: #CCCCCC;
+  }
+  
+  .green {
+    background-color: #009900;
+  }
+  
+  .yellow {
+    background-color: #FFFF33;
+  }
+  
+  .violet {
+    background-color: #CC00FF;
+  }
+  
+  .black {
+    background-color: #000000;
+  }
+  
+  .orange {
+    background-color: #FF6600;
+  }

@@ -1,7 +1,9 @@
-let allAgreeChx = document.getElementById('all-agree');
 let newsletterForm = document.getElementById('newsletter-form');
 
 const validate = (event) => {
+
+
+    event.preventDefault();
 
     let txtName = document.getElementById('name');
     let txtEmail = document.getElementById('email');
@@ -10,37 +12,56 @@ const validate = (event) => {
 
     errors.innerHTML = '';
 
-
     if (txtName.value.trim() === '') {
-
         let liError = document.createElement('li');
-        liError.innerText = 'Wpisz swoje Imie i nazwisko';
+        liError.innerText = 'Wpisz swoje imie i nazwisko';
         errors.appendChild(liError);
     }
 
     if (txtEmail.value.trim() === '') {
         let liError = document.createElement('li');
-        liError.innerText = 'Wpisz adres E-mail';
+        liError.innerText = "Wpisz adres E-mail";
         errors.appendChild(liError);
     }
-
-    if (!txtEmail.value.includes('@')){
-        let liError =document.createElement('li');
-        liError.innerText = 'Adres e-mail musi zawierać @'
+    
+    if (!txtEmail.value.includes('@')) {
+        let liError = document.createElement('li');
+        liError.innerText = "Adres E-mail musi zawierać @";
         errors.appendChild(liError);
     }
 
     if (!agree1.checked) {
         let liError = document.createElement('li');
-        liError.innerText = "Nie wyraziłeś zgody 1";
+        liError.innerText = 'Zaznacz zgode 1';
         errors.appendChild(liError);
     }
 
-    if (errors.children.length > 0) {
+    if (errors.children.lenght > 0 ) {
         event.preventDefault();
     }
 
+
+    let errorsList = document.getElementsByClassName('err');
+
+    // console.log(errorsList);
+
+    for (let err of errorsList) {
+        console.log(err);
+    //     if (errorsList[0] === '') {
+            let liError = document.createElement('li');
+            let label = document.querySelector(`[for=${err.id}]`)
+            liError.innerText = `Zle uzupełniono pole: ${label.innerText}`;
+            errors.appendChild(liError);
+    //     }
+        
+    }
+
 }
+
+
+
+
+let allAgreeChx = document.getElementById('all-agree');
 
 const allAgree = (event) => {
     let agree1 = document.getElementById('agree-1');
@@ -51,8 +72,7 @@ const allAgree = (event) => {
 
     agree1.disabled = event.target.checked;
     agree2.disabled = event.target.checked;
-
 }
 
+allAgreeChx.addEventListener('click', allAgree);
 newsletterForm.addEventListener('submit', validate);
-allAgreeChx.addEventListener('change', allAgree);
