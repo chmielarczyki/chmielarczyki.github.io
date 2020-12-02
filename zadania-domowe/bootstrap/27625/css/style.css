@@ -1,0 +1,7 @@
+.btn-custom {
+    color: red;
+}
+
+button.btn-custom:focus {
+    box-shadow: none;
+}
