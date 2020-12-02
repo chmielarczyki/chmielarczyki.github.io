@@ -1,0 +1,13 @@
+.item {
+    background-color: lightgrey;
+    max-width: 100px;
+}
+
+.link-item{
+   font-size: 3.5em;
+   color: orange;
+}
+
+.link-text {
+    font-size: 1em;
+}
