@@ -1,0 +1,57 @@
+.team {
+
+    width: 70%;
+    font-family: $font-bellota;
+
+    .team-content {
+
+        h2 {
+            font-size: $base-font-size *2.5;
+        }
+    
+        p {
+            font-size: $base-font-size;
+        }
+    }
+
+    .team-item{
+
+        .team-item-img {
+
+            position: relative;
+        }
+
+        .team-item-content {
+
+            position: absolute;
+            background-color: #ffffff;
+            right: 20%;
+            bottom: -20%;
+            padding: 10px 30px;
+        }
+
+        .social-link {
+            display: inline-flex;
+        }
+
+
+        .circle-social-link {
+            border: 1px solid $color-dark-gray;
+            max-width: 20px;
+
+            .social-link-item {
+
+                color: $color-dark-gray;
+                font-size: $base-font-size +6;
+                padding-left: 10px;
+                padding-right: 10px;
+                
+                &:hover {
+                    color: $color-blue;
+                }
+            }
+        }
+
+    }
+
+}

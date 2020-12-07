@@ -1,0 +1,132 @@
+header.container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.navbar {
+    font-family: $font-roboto;
+    font-size: 16px;
+    color: $color-dark-gray;
+    background-color: #ffffff;
+    text-transform: $text-uppercase;
+
+    #logoText {
+        width: 50px;
+    }
+
+    .navbar-toggler-icon {
+        color: $color-blue;
+    }
+
+}
+
+.banner {
+    font-family: $font-bellota;
+    padding-top: 50px;
+
+    h5 {
+        text-transform: $text-uppercase;
+        color: $color-dark-gray;
+    }
+
+    h1 {
+        font-size: $base-font-size * 3.1;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 22px;
+    }
+    
+    .btn-blue {
+        font-family: $font-roboto;
+        background-color: $color-blue;
+        font-size: 16px;
+        padding: 15px 25px;
+        text-transform: $text-uppercase;
+        border-radius: 0;
+    }
+
+    .watch-play{
+
+        display: flex;
+        display: inline-block;
+
+        .fa-play-circle {
+            color: $color-dark-gray;
+            font-size: 32px;
+            margin-left: 20px;
+            align-content: center;
+        }
+    
+        p {
+            font-size: 15px;
+            margin-left: 10px;
+            font-family: $font-roboto;
+            display: inline-block;
+            align-content: center;
+        }
+
+    }
+
+}
+
+
+
+#headerFlowers {
+    max-width: 100px;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+}
+
+#headerBg {
+    width: 500px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.about {
+    // @include fix-center;
+    font-size: $base-font-size;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    display: inline-block;
+
+    #logoAbout {
+        width: 25%;
+    }
+
+    h5 {
+        font-size: $base-font-size;
+        color: $color-dark-gray;
+        text-transform: $text-uppercase;
+    }
+
+    h2 {
+        font-family: $font-bellota;
+        font-size: $base-font-size * 2.5;
+    }
+
+    p {
+        font-size: $base-font-size;
+    }
+
+}
+
+@media (max-width: 996px) {
+    #headerBg {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    #headerFlowers {
+        max-width: 20px;
+    }
+}

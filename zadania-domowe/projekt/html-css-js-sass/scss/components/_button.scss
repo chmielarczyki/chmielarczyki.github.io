@@ -1,0 +1,14 @@
+.btn-base {
+    background-color: $color-blue;
+    font-size: $base-font-size;
+    color: #ffffff;
+    width: 150px;
+    text-transform: $text-uppercase;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+
+.btn-gray {
+    background-color: $color-dark-gray;
+}
