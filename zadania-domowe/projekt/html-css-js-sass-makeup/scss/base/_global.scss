@@ -51,7 +51,11 @@ section {
             margin: auto;
         }
 
-        @media all and (min-width: $media) {
+        a {
+            transition: all .3s;
+        }
+
+        @media all and (min-width: $medium) {
             p {
                 max-width: 60%;
             }

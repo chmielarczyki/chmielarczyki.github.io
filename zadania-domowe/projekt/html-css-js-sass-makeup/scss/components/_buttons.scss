@@ -29,3 +29,14 @@
         color: $primary-text-color;
     }
 }
+
+.btn-form {
+    @extend %btn;
+    background-color: $primary-color;
+    color: $primary-text-color;
+
+    &:hover {
+        background-color: $button-color;
+        color: $secondary-text-color;
+    }
+}

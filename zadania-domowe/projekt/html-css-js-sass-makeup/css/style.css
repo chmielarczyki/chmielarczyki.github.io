@@ -55,6 +55,16 @@ section .section-header p {
   margin: auto;
 }
 
+section .section-header a {
+  transition: all .3s;
+}
+
+@media all and (min-width: 768px) {
+  section .section-header p {
+    max-width: 60%;
+  }
+}
+
 @media all and (min-width: 992px) {
   .container {
     max-width: 960px;
@@ -442,6 +452,7 @@ input[type="checkbox"], input[type="radio"] {
   top: 0;
   right: 0;
   z-index: 10000;
+  border-radius: 50%;
   display: none;
 }
 
@@ -619,7 +630,136 @@ input[type="checkbox"], input[type="radio"] {
   }
 }
 
-.btn-primary, .btn-secondary {
+.team {
+  margin-bottom: 100px;
+}
+
+.appointment {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.appointment .desktop-background {
+  width: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+}
+
+.appointment #appointment-form {
+  background-color: #888888;
+  padding: 40px 80px;
+}
+
+@media all and (min-width: 992px) {
+  .appointment .desktop-background {
+    display: block;
+  }
+  .appointment form {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px;
+  }
+  .appointment form input,
+  .appointment form select {
+    width: 49%;
+  }
+  .appointment form textarea {
+    margin: 60px 0;
+  }
+}
+
+.contact {
+  margin-top: 100px;
+  color: #fff;
+  background-color: #888888;
+}
+
+.contact h2 {
+  color: #fff;
+}
+
+.contact .contact-data {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px 0;
+  margin-bottom: 30px;
+}
+
+.contact .contact-data .contact-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .contact-data .contact-item .img-holder {
+  width: 15%;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.contact .contact-data .contact-item .img-holder img {
+  width: 30px;
+}
+
+.contact .contact-data .contact-item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.contact .contact-data .contact-item a:hover {
+  text-decoration: underline;
+}
+
+.contact .contact-form {
+  padding: 25px 0;
+}
+
+@media all and (min-width: 768px) {
+  .contact .contact-item {
+    justify-content: flex-start;
+  }
+}
+
+.page-footer {
+  text-align: center;
+}
+
+.page-footer img {
+  width: 200px;
+}
+
+.page-footer .footer-nav .menu {
+  list-style: none;
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+
+.page-footer .footer-nav .menu .menu-item {
+  display: inline-block;
+  margin: 0 20px;
+  text-transform: uppercase;
+  font-size: initial;
+}
+
+.page-footer .footer-nav .menu .menu-item a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 700;
+}
+
+.page-footer .footer-nav .menu .menu-item {
+  padding: 10px 0;
+}
+
+.btn-primary, .btn-secondary, .btn-form {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -648,10 +788,20 @@ input[type="checkbox"], input[type="radio"] {
   color: #888888;
 }
 
-.infobox {
+.btn-form {
+  background-color: #ffcccc;
+  color: #888888;
+}
+
+.btn-form:hover {
+  background-color: #D3D3D3;
+  color: #555;
+}
+
+.infobox, .infobox-team {
   padding: 0 10px;
-  text-align: center;
   margin-top: 30px;
+  text-align: center;
 }
 
 .infobox .infobox-inner {
@@ -669,6 +819,25 @@ input[type="checkbox"], input[type="radio"] {
   object-fit: cover;
 }
 
+.infobox .infobox-inner .meta {
+  text-transform: uppercase;
+}
+
+.infobox .infobox-inner .meta a {
+  color: #888888;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.infobox .infobox-inner .meta .category {
+  margin-right: 5px;
+}
+
+.infobox .infobox-inner .meta .blog-data {
+  margin-left: 5px;
+}
+
 .infobox .infobox-inner h3 {
   font-size: 22px;
 }
@@ -679,14 +848,123 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .infobox-team {
-  padding: 0 10px;
-  text-align: center;
-  margin-top: 30px;
+  margin-top: 60px;
+  position: relative;
 }
 
 .infobox-team img {
   width: 100%;
-  height: 400px;
+  height: 300px;
   object-fit: cover;
+}
+
+.infobox-team .infobox-team-caption {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -30px;
+  background-color: #ffcccc;
+  color: #473452;
+  width: 80%;
+  margin: 0 auto;
+  transition: all .3s;
+  border-radius: 50%;
+}
+
+.infobox-team .infobox-team-caption:hover {
+  padding-bottom: 30px;
+  box-shadow: 0 5px 20px #f0f0f0;
+}
+
+.infobox-team .infobox-team-caption:hover .team-social-icons {
+  height: 35px;
+}
+
+.infobox-team .infobox-team-caption h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px auto;
+}
+
+.infobox-team .infobox-team-caption p {
+  margin: 10px auto;
+}
+
+.infobox-team .infobox-team-caption .team-social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  height: 0;
+  transition: all .5s;
+  margin: 0 auto;
+}
+
+.infobox-team .infobox-team-caption .team-social-icons a {
+  transition: all .3s;
+  border: 1px solid #473452;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.infobox-team .infobox-team-caption .team-social-icons a:hover {
+  background-color: #888888;
+  color: #ffffff;
+  box-shadow: 0 5px 20px #f0f0f0;
+}
+
+input,
+select,
+textarea {
+  border: 0;
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+  width: 100%;
+  background-color: transparent;
+  padding: 15px;
+  color: #fff;
+  margin: 25px auto;
+  text-transform: uppercase;
+}
+
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff;
+}
+
+input::-moz-placeholder,
+select::-moz-placeholder,
+textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+}
+
+input:-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff;
+}
+
+input:-moz-placeholder,
+select:-moz-placeholder,
+textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+}
+
+input.error,
+select.error,
+textarea.error {
+  border-bottom: 1px solid #f00;
+}
+
+textarea {
+  height: 100px;
 }
 /*# sourceMappingURL=style.css.map */
