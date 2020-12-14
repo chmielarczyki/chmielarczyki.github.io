@@ -354,10 +354,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .main-nav .open-menu-holder {
-  background-image: url("../../img/menu-bg.jpg");
-  background-size: center;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #ffcccc;
   position: fixed;
   top: 0;
   text-align: center;
@@ -918,6 +915,7 @@ input[type="checkbox"], input[type="radio"] {
 .infobox-team .infobox-team-caption .team-social-icons a {
   transition: all .3s;
   border: 1px solid #473452;
+  color: #473452;
   border-radius: 50%;
   width: 35px;
   height: 35px;

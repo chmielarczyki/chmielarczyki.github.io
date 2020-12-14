@@ -39,10 +39,11 @@
 
     .open-menu-holder {
 
-        background-image: url('../../img/menu-bg.jpg');
-        background-size: center;
-        background-repeat: no-repeat;
-        background-position: center;
+        // background-image: url('../../img/bg-menu.jpg');
+        background-color: $primary-color;
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // background-position: center;
         position: fixed;
         top: 0;
         text-align: center;
@@ -52,7 +53,15 @@
 
         &.open {
             display: block;
-            
+            // flex-basis: 100%;
+            // flex-grow: 70;
+
+            // @media all and (min-width: $extra-small){
+            //     max-width: 992px;
+            //     width: 100%;
+
+            // }
+
         }
     }
 
