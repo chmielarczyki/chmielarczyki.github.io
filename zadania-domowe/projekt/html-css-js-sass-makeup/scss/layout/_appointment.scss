@@ -12,6 +12,21 @@
     #appointment-form {
         background-color: $primary-text-color;
         padding: 40px 80px;
+
+        .appointment-message {
+            width: 100%;
+            display: none;
+
+            &.error {
+                color: red;
+                display: block;
+            }
+
+            &.send {
+                color: #fff;
+                display: block;
+            }
+        }
     }
 
     @media all and (min-width: $large) {

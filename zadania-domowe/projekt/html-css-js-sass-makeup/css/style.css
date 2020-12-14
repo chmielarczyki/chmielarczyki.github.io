@@ -652,6 +652,21 @@ input[type="checkbox"], input[type="radio"] {
   padding: 40px 80px;
 }
 
+.appointment #appointment-form .appointment-message {
+  width: 100%;
+  display: none;
+}
+
+.appointment #appointment-form .appointment-message.error {
+  color: red;
+  display: block;
+}
+
+.appointment #appointment-form .appointment-message.send {
+  color: #fff;
+  display: block;
+}
+
 @media all and (min-width: 992px) {
   .appointment .desktop-background {
     display: block;
@@ -966,5 +981,9 @@ textarea.error {
 
 textarea {
   height: 100px;
+}
+
+select option {
+  background-color: #ffcccc;
 }
 /*# sourceMappingURL=style.css.map */
