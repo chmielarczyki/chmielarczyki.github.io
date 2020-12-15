@@ -128,8 +128,8 @@ document.getElementById('oblicz').addEventListener('click', function() {
 
             console.log(pracownik[i]);
 
-            arr = pracownik[i].split();
-            console.log(pracownik[i]);
+            // arr = pracownik[i].split();
+            // console.log(pracownik[i]);
         }
 
     }
