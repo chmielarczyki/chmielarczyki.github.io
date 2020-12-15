@@ -53,9 +53,7 @@ document.getElementById('oblicz').addEventListener('click', function() {
 
             pracownik[i].classList.add('green');
 
-            najCzas += czas[i];
-
-           
+            // najCzas += czas[i];
 
             // arr.sort();
 
