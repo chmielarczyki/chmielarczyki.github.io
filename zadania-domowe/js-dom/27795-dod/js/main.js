@@ -10,6 +10,7 @@ document.getElementById('oblicz').addEventListener('click', function() {
     let pracownik = document.querySelectorAll('.pracownik');
     console.log(pracownik);
     let podwyzka = 0;
+    let najCzas = [];
     let arr = [];
 
     // wyplata[0].innerText = czas[0].value * stawka[0].value;
@@ -50,15 +51,26 @@ document.getElementById('oblicz').addEventListener('click', function() {
 
         } else {
 
+            pracownik[i].classList.add('green');
+
+            najCzas += czas[i];
+
+           
+
+            // arr.sort();
+
             /* nie wiem jak pobrac imiona pracowników zrobić je w tablicę, sort() i slice() pobrac 3 pierwsze elementy */
             // document.getElementById('najlepsi-pracownicy').innerHTML = pracownik[i];
 
-            console.log(pracownik[i]);
+            // console.log(pracownik[i]);
         }
+        arr = jQuery.makeArray(najCzas);
 
-        arr = jQuery.makeArray( elems );
+        // arr = jQuery.makeArray( pracownik );
 
-        console.log(arr);
+        // arr.sort();
+        console.log(najCzas)
+        console.log(arr)
     }
 })
 
