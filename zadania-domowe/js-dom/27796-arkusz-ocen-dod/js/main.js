@@ -28,9 +28,9 @@ document.getElementById('oblicz').addEventListener('click', function() {
  
         srednia = (sumaOcen/oceny.length).toFixed(2) ;
 
-        let sr = srednia.toString();
+        // let sr = srednia.toString();
 
-        console.log(sr);
+        // console.log(sr);
 
          
         let sredniaUcznia = document.querySelectorAll('span[class=srednia]');
@@ -39,7 +39,8 @@ document.getElementById('oblicz').addEventListener('click', function() {
 
         console.log(sredniaUcznia);
 
-        sredniaUcznia.innerText = sr;
+        sredniaUcznia.innerText = srednia;
+        // sredniaUcznia.textContent = srednia;
 
         console.log(student.querySelector('span').innerHTML + ' ' + srednia);
 
@@ -50,8 +51,6 @@ document.getElementById('oblicz').addEventListener('click', function() {
         // }
 
         (srednia >= 4.75) ? student.classList.add('green') : -1 
-
-      
     }
  
 })
