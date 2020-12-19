@@ -39,9 +39,21 @@ document.getElementById('oblicz').addEventListener('click', function() {
     
     emploeesArray.sort((a, b) => (a.workTime < b.workTime) ? 1 : -1)
 
-    // console.log(emploeesArray[1].name);
+    // document.getElementById('najlepsi-pracownicy').innerText = `${emploeesArray[1].name}, ${emploeesArray[2].name}, ${emploeesArray[3].name}`
+    
+    let ulList = document.createElement('ul');
+    document.getElementById('najlepsi-pracownicy').appendChild(ulList);
+    let liOne = document.createElement('li');
+    liOne.innerText = `${emploeesArray[1].name}`;
+    ulList.appendChild(liOne);
 
-    document.getElementById('najlepsi-pracownicy').innerText = `${emploeesArray[1].name}, ${emploeesArray[2].name}, ${emploeesArray[3].name}`
+    let liTwo = document.createElement('li');
+    liTwo.innerText = `${emploeesArray[2].name}`;
+    ulList.appendChild(liTwo);
+
+    let liThree = document.createElement('li');
+    liThree.innerText = `${emploeesArray[3].name}`;
+    ulList.appendChild(liThree);
     
 })
 
