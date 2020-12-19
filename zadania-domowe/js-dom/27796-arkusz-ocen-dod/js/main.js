@@ -1,53 +1,57 @@
 document.getElementById('oblicz').addEventListener('click', function() {
-
-
+ 
+ 
     let studenci = document.getElementById('pracownicy').querySelectorAll('div[id^=u]');
-    
+
     for (let student of studenci) {
         let sumaOcen = 0;
         let srednia = 0;
 
         let oceny = student.querySelectorAll('input[type=number]');
+ 
+        let zajeciaDod = student.querySelector('.zajecia-dodatkowe');
 
-        let zajeciaDod = document.querySelectorAll('.zajecia-dodatkowe');
-
-        let sredniaUcznia = document.getElementsByClassName('srednia');
-
+ 
         for (let ocena of oceny) {
+            console.log(zajeciaDod.value );
 
-            for (let zajecia of zajeciaDod) {
+            if (zajeciaDod.value.includes(ocena.className && ocena.value < 6.0)) {
+                //nie wiem jak konkretnie odnieść sie do oceny z zajęć dodatowych
 
-                 if (zajecia.value == '') {
-
-                    sumaOcen += +ocena.value;
-                    srednia = sumaOcen/oceny.length;
-                    let sr = srednia.toFixed(2) 
-
-                    console.log(sr);
-
-                    sredniaUcznia.textContent = sr;
-
-                    } else {
-                        console.log('jfgjdfngjd');
-                    }
-
-                console.log(zajecia.value)
-                
+                sumaOcen += (+ocena.value) + 0.5 ;
+            } else {
+                sumaOcen += +ocena.value ;
             }
-
-           
-
+ 
+            (ocena.value == 1) ? student.classList.add('red') : -1 
         }
+ 
+        srednia = (sumaOcen/oceny.length).toFixed(2) ;
 
-        // console.log(sumaOcen/oceny.length);
-        // console.log(sredniaUcznia);
+        let sr = srednia.toString();
+
+        console.log(sr);
+
+         
+        let sredniaUcznia = document.querySelectorAll('span[class=srednia]');
+        // let sredniaUcznia = document.getElementsByClassName('srednia');
+        // let sredniaUcznia = document.getElementsByTagName('span[class=srednia]');
+
+        console.log(sredniaUcznia);
+
+        sredniaUcznia.innerText = sr;
+
+        console.log(student.querySelector('span').innerHTML + ' ' + srednia);
+
+        // if (srednia >= 4.75) {
+        //     student.classList.add('green');
+        //     // document.querySelectorAll('.uczen').classList.add('green'); 
+        //     // czemu to nie dziła 
+        // }
+
+        (srednia >= 4.75) ? student.classList.add('green') : -1 
+
+      
     }
-
-  
-    // console.log(studenci);
-
-  
-
-
+ 
 })
-

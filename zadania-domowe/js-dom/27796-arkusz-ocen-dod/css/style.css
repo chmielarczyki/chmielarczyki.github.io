@@ -29,3 +29,11 @@ button {
     margin: 50px auto;
     font-size: 22px;
 }
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
