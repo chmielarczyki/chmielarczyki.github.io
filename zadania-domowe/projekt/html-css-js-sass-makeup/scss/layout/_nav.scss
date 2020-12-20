@@ -43,7 +43,8 @@
         top: 0;
         text-align: center;
         width: 100%;
-        padding: 12 0;
+        padding-top: 12px;
+        padding-left: 0;
         display: none;
 
         &.open {
@@ -95,6 +96,12 @@
             .menu {
                 @include menu-list;
             }
+        }
+    }
+
+    @media all and (min-width: $medium){
+        .container {
+            padding: 0;
         }
     }
 }
